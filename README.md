@@ -26,7 +26,7 @@ docker run --rm -p 8080:8080 \
   -e MONGO_URI=mongodb://localhost:27017 \
   -e MONGO_DB=moss \
   -e PG_URI=postgresql://localhost:5432 \
-  ghcr.io/tsinghua-fib-lab/moss-webui-backend:main
+  ghcr.io/tsinghua-fib-lab/moss-webui-backend:latest
 ```
 
 ## API Docs
