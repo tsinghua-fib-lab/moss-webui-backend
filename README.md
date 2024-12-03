@@ -1,5 +1,7 @@
 # moss-webui-backend
 
+[![Docker](https://github.com/tsinghua-fib-lab/moss-webui-backend/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/tsinghua-fib-lab/moss-webui-backend/actions/workflows/docker-publish.yml)
+
 The backend of the MOSS web UI.
 
 ## Pre-requisites
@@ -20,7 +22,11 @@ The backend uses environment variables to configure the connection to the databa
 We recommend using docker to run the backend. You can build the docker image using the following command:
 
 ```bash
-docker run --rm -p 8080:8080 -e MONGO_URI=mongodb://localhost:27017 -e MONGO_DB=moss -e PG_URI=postgresql://localhost:5432 moss-webui-backend
+docker run --rm -p 8080:8080 \
+  -e MONGO_URI=mongodb://localhost:27017 \
+  -e MONGO_DB=moss \
+  -e PG_URI=postgresql://localhost:5432 \
+  ghcr.io/tsinghua-fib-lab/moss-webui-backend:main
 ```
 
 ## API Docs
